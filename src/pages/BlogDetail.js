@@ -44,7 +44,7 @@ const BlogDetail = (props) => {
           {/*<img src="http://lorempixel.com/1920/280/nature/6/" alt="011" />*/}
         </div>
         <div className="card-content">
-  
+  {console.log(post)}
         {/*{/*<h2 className="card-title" dangerouslySetInnerHTML={{__html:post.title.rendered}}></h2>
     <div dangerouslySetInnerHTML={{__html:post.excerpt.rendered}}></div>*/}
         </div>
