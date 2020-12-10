@@ -31,20 +31,20 @@ const BlogDetail = () => {
             }
           
             }
-            
+            // document.title = post.title.rendered
             fetchData();
-        
+           
       },[slug]);
 
-      console.log(post)
+      
     return (
-        <div>
+        <>
              <Navbar />
-             <div className="container">
+             <div className="container  pt-5">
                 <div className="row">
                 { loading && <Loader />}
             { error && <Message message={error} error/>}
-            <div className="card darken-1">
+            <div className="card border-0">
             <div className="card-content">
            {!post.length &&(
                <>
@@ -54,13 +54,14 @@ const BlogDetail = () => {
            )}
            
          </div>
-         <div className="card-action">
+         {!post.length &&( <div className="card-action">
          <span className="text-left"><Moment fromNow>{post.date}</Moment>  </span>
         </div>
+        )}
          </div>
          </div>
          </div>
-        </div>
+        </>
     )
 }
 
