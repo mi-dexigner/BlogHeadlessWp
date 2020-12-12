@@ -36,6 +36,7 @@ export default class Login extends Component {
 
         localStorage.setItem( 'token', token );
         localStorage.setItem( 'userName', user_nicename );
+        localStorage.setItem( 'loggedIn', true );
         
         this.setState( {
             loading: false,
