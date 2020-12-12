@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import axios from "../services/axios";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
+import FeaturedMedia from "../components/FeaturedMedia";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -39,7 +40,7 @@ const Home = () => {
               {error && <Message message={error} error />}
               {posts.map((post) => (
                   <div className="card border-0" key={post.id}>
-                    {/*<img src="..." class="card-img-top" alt="...">*/}
+                    <FeaturedMedia id={post.featured_media} />
                     <div className="card-body">
                       <h2
                         className="card-title"

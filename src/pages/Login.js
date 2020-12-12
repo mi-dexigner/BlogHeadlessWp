@@ -62,7 +62,7 @@ export default class Login extends Component {
         return (
             <>
                  <Navbar/>
-                 {loggedIn || localStorage.getItem( 'token' ) ? (<Redirect to={`/dashboard/${user}`} noThrow />):(
+                 {loggedIn || localStorage.getItem( 'token' ) ? (<Redirect to={`/admin/dashboard/${user}`} noThrow />):(
               <main className="form-signin">
                   { error && <div className="alert alert-danger" dangerouslySetInnerHTML={ this.createMarkup( error ) }/> }
   <form onSubmit={ this.onFormSubmit }>
