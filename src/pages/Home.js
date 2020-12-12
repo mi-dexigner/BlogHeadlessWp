@@ -41,6 +41,7 @@ const Home = () => {
               {posts.map((post) => (
                   <div className="card border-0" key={post.id}>
                     <FeaturedMedia id={post.featured_media} />
+                    
                     <div className="card-body">
                       <h2
                         className="card-title"

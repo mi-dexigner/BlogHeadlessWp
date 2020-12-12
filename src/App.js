@@ -1,21 +1,18 @@
-import React,{ lazy, Suspense } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Loader from './components/Loader';
-const Authors = lazy(() => import('./pages/Authors'))
-const Home = lazy(() => import('./pages/Home'))
-const BlogDetail = lazy(() => import('./pages/BlogDetail'))
-const Dashboard = lazy(() => import('./pages/Dashboard'))
-const Login = lazy(() => import('./pages/Login'))
-const Media = lazy(() => import('./pages/Media'))
-const PageNew = lazy(() => import('./pages/PageNew'))
-const PostNew = lazy(() => import('./pages/PostNew'))
-const User = lazy(() => import('./pages/User'))
-const FourZeroFour = lazy(() => import('./pages/FourZeroFour'))
-
+import Authors  from './pages/Authors'
+import Home  from './pages/Home'
+import BlogDetail  from './pages/BlogDetail'
+import Dashboard  from './pages/Dashboard'
+import Login  from './pages/Login'
+import Media  from './pages/Media'
+import PageNew  from './pages/PageNew'
+import PostNew  from './pages/PostNew'
+import User  from './pages/User'
+import FourZeroFour  from './pages/FourZeroFour'
 const App = () => {
   return (
     <div className="app user-select-none">
-      <Suspense fallback={<Loader/>}>
       <Router>
     <Switch>
       <Route exact path="/" component={Home} />
@@ -30,7 +27,6 @@ const App = () => {
       <Route component={FourZeroFour} />
     </Switch>
   </Router>
-  </Suspense>
     </div>
   )
 }
