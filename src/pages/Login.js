@@ -46,15 +46,15 @@ export default class Login extends Component {
             loggedIn: true
         } )
 
-        }).catch( err => {
-
-					this.setState( { error: err.response.data.message, loading: false } );
+        }).catch( err => {this.setState( { error: err.response.data.message, loading: false } );
 				} )
     } )
     }
+
     handleOnChnage = (event) =>{
         this.setState( { [event.target.name]: event.target.value } );
     }
+
     render() {
         const { username, password, userNiceName, loggedIn, error, loading }= this.state;
         const user = ( userNiceName ) ? userNiceName : localStorage.getItem( 'userName' );

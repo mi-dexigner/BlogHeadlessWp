@@ -8,7 +8,7 @@ const Navbar = ({props}) => {
     const loggedIn = localStorage.getItem('loggedIn');
     return (
         
-          <nav className="sticky-top navbar navbar-expand-lg navbar-light bg-white shadow flex-md-nowrap">
+          <nav className="sticky-top navbar navbar-expand-lg navbar-light bg-white shadow-sm flex-md-nowrap">
             <div className="container mx-auto flex justify-between">
                 
                     <Link to="/" className="navbar-brand">
