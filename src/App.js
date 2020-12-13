@@ -10,6 +10,7 @@ import PageNew  from './pages/PageNew'
 import PostNew  from './pages/PostNew'
 import User  from './pages/User'
 import FourZeroFour  from './pages/FourZeroFour'
+import Contact from './pages/Contact';
 const App = () => {
   return (
     <div className="app user-select-none">
@@ -18,7 +19,8 @@ const App = () => {
       <Route exact path="/" component={Home} />
       <Route path="/post/:slug" component={BlogDetail} />
       <Route path="/authors" component={Authors} />
-      <Route path="/login" component={Login} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/admin/login" component={Login} />
       <Route path="/admin/dashboard/:userName" component={Dashboard} />
       <Route path="/admin/post-new/" component={PostNew} />
       <Route path="/admin/page-new/" component={PageNew} />

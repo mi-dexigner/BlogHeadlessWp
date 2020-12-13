@@ -16,8 +16,7 @@ const Navbar = ({props}) => {
                     </Link>
               
             <div className="collapse navbar-collapse" id="navbarSupportedContent ms-auto">
-
-                
+  
                 <form className="d-flex ms-auto">
   <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
   <button className="btn btn-outline-success" type="submit">Search</button>

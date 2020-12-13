@@ -7,14 +7,9 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 
 const BlogDetail = () => {
-    const [loading,setLoading] = useState(true);
     const [error,setError] = useState('');
-    const [post,setPost] = useState({
-        title: '',
-        content:'',
-        date:''
-      });
-    //const [error,setError] = useState('');
+    const [post,setPost] = useState();
+    
     const {slug} = useParams();
     useEffect(() => {
         async function fetchData() {
@@ -22,10 +17,8 @@ const BlogDetail = () => {
             const request = await axios.get(`/posts?slug=${slug}`);
             //console.log(request.data[0]);
             setPost(request.data[0]);;
-            setLoading(false);
             return request.data;
             }catch (error) {
-              setLoading(false);
               setError(error.response.data.message);
               console.error(error.response.data.message);
             }
@@ -36,13 +29,13 @@ const BlogDetail = () => {
            
       },[slug]);
 
-      
+      if(!post) return <Loader/> 
     return (
         <>
              <Navbar />
              <div className="container  pt-5">
                 <div className="row">
-                { loading && <Loader />}
+
             { error && <Message message={error} error/>}
             <div className="card border-0">
             <div className="card-content">

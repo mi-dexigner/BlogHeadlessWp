@@ -8,7 +8,6 @@ import Message from "../components/Message";
 import FeaturedMedia from "../components/FeaturedMedia";
 
 const Home = () => {
-  const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState("");
 
@@ -17,11 +16,9 @@ const Home = () => {
       try {
         const request = await axios.get("/posts");
         //console.log(request.data);
-        setLoading(false);
         setPosts(request.data);
         return request.data;
       } catch (error) {
-        setLoading(false);
         setError(error.response.data.message);
         console.error(error.response.data.message);
       }
@@ -29,6 +26,9 @@ const Home = () => {
 
     fetchData();
   }, []);
+
+  if(!posts) return <Loader/>
+  
   return (
     <>
       <Navbar />
@@ -36,7 +36,7 @@ const Home = () => {
         <div className="row">
           <div className="col-sm-12">
           
-              {loading && <Loader />}
+             
               {error && <Message message={error} error />}
               {posts.map((post) => (
                   <div className="card border-0" key={post.id}>
