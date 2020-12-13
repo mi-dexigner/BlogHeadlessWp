@@ -25,6 +25,7 @@ const Home = () => {
     }
 
     fetchData();
+
   }, []);
 
   if(!posts) return <Loader/>
@@ -35,8 +36,6 @@ const Home = () => {
       <div className="container pt-5">
         <div className="row">
           <div className="col-sm-12">
-          
-             
               {error && <Message message={error} error />}
               {posts.map((post) => (
                   <div className="card border-0" key={post.id}>
