@@ -1,8 +1,9 @@
 import React from 'react'
 import Avatar from './Avatar'
+import memphis from '../memphis.png'
 const AuthorCard = ({avatar_urls,name,position,description,instagram,twitter,website}) => {
     return (
-        <div className="p-5 rounded bg-white mb-5" >
+        <div className="p-5 rounded bg-white mb-5" style={{backgroundImage:"url(" + { memphis } + ")"}} >
            <div className="row">
                <div className="col-md-4">
                <Avatar url={avatar_urls} />

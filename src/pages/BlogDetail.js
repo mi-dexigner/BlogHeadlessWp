@@ -5,6 +5,7 @@ import axios from '../services/axios'
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import FeaturedMedia from '../components/FeaturedMedia';
+import Footer from '../components/Footer';
 
 const BlogDetail = () => {
     const [error,setError] = useState('');
@@ -15,7 +16,6 @@ const BlogDetail = () => {
         async function fetchData() {
             try {
             const request = await axios.get(`/posts?slug=${slug}`);
-            //console.log(request.data[0]);
             setPost(request.data[0]);;
             return request.data;
             }catch (error) {
@@ -35,7 +35,6 @@ const BlogDetail = () => {
              <Navbar />
              <div className="container  pt-5">
                 <div className="row-cols-1 row g-3">
-
             { error && <Message message={error} error/>}
             <div className="card border-0  shadow-sm">
                 <FeaturedMedia id={post.featured_media} classes="img-fluid" />
@@ -51,6 +50,7 @@ const BlogDetail = () => {
          </div>
          </div>
          </div>
+         <Footer/>
         </>
     )
 }
