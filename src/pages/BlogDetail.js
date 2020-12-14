@@ -38,7 +38,8 @@ const BlogDetail = () => {
             { error && <Message message={error} error/>}
             <div className="col">
             <div className="card border-0  shadow-sm">
-                <FeaturedMedia id={post.featured_media} classes="img-fluid bd-placeholder-img card-img-top" />
+            {post.featured_media !== 0 ? <FeaturedMedia id={post.featured_media} classes="img-fluid bd-placeholder-img card-img-top" /> :null }
+                
             <div className="card-body">
            {!post.length &&(
                <>
