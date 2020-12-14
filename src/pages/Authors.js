@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import AuthorCard from '../components/AuthorCard'
 import Loader from '../components/Loader'
 import axios from "../services/axios";
+import Message from '../components/Message'
 
 const Authors = () => {
     const [authors, setAuthors] = useState(null);
@@ -40,14 +41,13 @@ const Authors = () => {
            <section>
                <div className="container">
                    <div className="row">
-                 
+                   {error && <Message message={error} error />}
                    {authors.map((author) => (<>
-                  { console.log(author.avatar_urls[96])}
-                    <AuthorCard key={author.id} avatar_urls={author.avatar_urls[96]}  name={author.full_name.length == 0 ? author.full_name : author.name} slug={author.slug} position="Creative Designer"
+                    <AuthorCard key={author.id} avatar_urls={author.avatar_urls[96]}  name={author.full_name.length === 0 ? author.full_name : author.name} slug={author.slug} position="Creative Designer"
                        description={author.description}
                        instagram="#"
                        twitter="#"
-                       website={author.url.length == 0 ? author.url :'#' }
+                       website={author.url.length === 0 ? author.url :'#' }
                        />
                    </>))}
                    </div>
