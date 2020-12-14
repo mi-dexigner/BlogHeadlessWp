@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const SidebarItem = ({url,name}) => {
     return (
-            <li class="nav-item">
+            <li className="nav-item">
                 <NavLink 
                     to={`/admin${url}`}
                     className="nav-link"

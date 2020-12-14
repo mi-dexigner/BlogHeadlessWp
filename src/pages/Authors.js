@@ -42,14 +42,18 @@ const Authors = () => {
                <div className="container">
                    <div className="row">
                    {error && <Message message={error} error />}
-                   {authors.map((author) => (<>
-                    <AuthorCard key={author.id} avatar_urls={author.avatar_urls[96]}  name={author.full_name.length === 0 ? author.full_name : author.name} slug={author.slug} position="Creative Designer"
-                       description={author.description}
-                       instagram="#"
-                       twitter="#"
-                       website={author.url.length === 0 ? author.url :'#' }
-                       />
-                   </>))}
+                   {authors.map((author) => (
+                    <AuthorCard 
+                    key={author.slug} 
+                    avatar_urls={author.avatar_urls[96]}  
+                    name={author.full_name.length === 0 ? author.full_name : author.name} slug={author.slug} 
+                    position="Creative Designer"
+                    description={author.description}
+                    instagram="#"
+                    twitter="#"
+                    website={author.url.length === 0 ? author.url :'#' }
+                    />
+                   ))}
                    </div>
                </div>
            </section>

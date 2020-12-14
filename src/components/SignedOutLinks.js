@@ -6,8 +6,8 @@ const SignedOutLinks = () => {
         <>
         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-                <NavLink className="nav-link" activeClassName='active' to="/">Home</NavLink></li>
-            <li className="nav-item">
+           <NavLink className="nav-link" activeClassName='active' to="/">Home</NavLink></li>
+      <li className="nav-item">
            <NavLink className="nav-link" activeClassName='active' to="/authors">Our Team</NavLink></li>
             <li className="nav-item">
                 <NavLink className="nav-link" activeClassName='active' to="/contact">Contact</NavLink></li>

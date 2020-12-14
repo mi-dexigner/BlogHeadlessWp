@@ -39,7 +39,7 @@ const Home = () => {
               {posts.map((post) => (
                 <div className="col" key={post.id}>
                   <div className="card shadow-sm rounded  mb-3">
-                    <FeaturedMedia id={post.featured_media} classes="bd-placeholder-img card-img-top" />
+                  {post.featured_media!== 0 ? <FeaturedMedia id={post.featured_media} classes="bd-placeholder-img card-img-top" /> :null }
                     <div className="card-body">
                       <h4
                         className="card-title"

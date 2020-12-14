@@ -67,6 +67,7 @@ export default class Login extends Component {
                   { error && <div className="alert alert-danger" dangerouslySetInnerHTML={ this.createMarkup( error ) }/> }
   <form onSubmit={ this.onFormSubmit }>
     <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+    <div className="mb-3">
     <label htmlFor="username" className="visually-hidden">username</label>
     <input type="text" 
     className="form-control" 
@@ -77,6 +78,8 @@ export default class Login extends Component {
     required 
     autoFocus 
     />
+    </div>
+    <div className="mb-3">
     <label htmlFor="password" className="visually-hidden">Password</label>
     <input type="password" 
     className="form-control" 
@@ -85,7 +88,7 @@ export default class Login extends Component {
     value={password}
     onChange={this.handleOnChnage}
     required />
-   
+   </div>
     <button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
     { loading && <Loader/> }
    
