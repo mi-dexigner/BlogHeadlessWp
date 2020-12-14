@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import AuthorCard from '../components/AuthorCard'
+import Loader from '../components/Loader'
+import axios from "../services/axios";
 
 const Authors = () => {
+    const [authors, setAuthors] = useState(null);
+    const [error, setError] = useState("");
+
+    useEffect(() => {
+        async function fetchData() {
+          try {
+            const request = await axios.get("/users");
+           setAuthors(request.data);
+            //console.log(request.data);
+            return request.data;
+          } catch (error) {
+           setError(error.response.data.message);
+            console.error(error.response.data.message);
+          }
+        }
+    
+        fetchData();
+    
+      }, []);
+    if(!authors) return <Loader/>
     return (
         <>
         <Navbar/>
@@ -18,18 +40,16 @@ const Authors = () => {
            <section>
                <div className="container">
                    <div className="row">
-                       <AuthorCard avatar_urls="https://images.generated.photos/Q8U80m2oTnWKLw_Qb6fA5mmMJQG5RtIissYG14a_6Cw/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxNTYwMzguanBn.jpg"  name="kane Smith Smith" slug="jane-smith" position="Creative Designer"
-                       description= "Sed commodo, est quis maximus fermentum, massa ipsum euismod neque, in varius risus tellus quis lacus. Sed ac bibendum odio."
+                 
+                   {authors.map((author) => (<>
+                  { console.log(author.avatar_urls[96])}
+                    <AuthorCard key={author.id} avatar_urls={author.avatar_urls[96]}  name={author.full_name.length == 0 ? author.full_name : author.name} slug={author.slug} position="Creative Designer"
+                       description={author.description}
                        instagram="#"
                        twitter="#"
-                       website="#"
+                       website={author.url.length == 0 ? author.url :'#' }
                        />
-                       <AuthorCard avatar_urls="https://images.generated.photos/Q8U80m2oTnWKLw_Qb6fA5mmMJQG5RtIissYG14a_6Cw/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxNTYwMzguanBn.jpg"  name="kane Smith Smith" slug="jane-smith" position="Creative Designer"
-                       description= "Sed commodo, est quis maximus fermentum, massa ipsum euismod neque, in varius risus tellus quis lacus. Sed ac bibendum odio."
-                       instagram="#"
-                       twitter="#"
-                       website="#"
-                       />
+                   </>))}
                    </div>
                </div>
            </section>

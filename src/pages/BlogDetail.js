@@ -33,11 +33,12 @@ const BlogDetail = () => {
     return (
         <>
              <Navbar />
-             <div className="container  pt-5">
+             <div className="container  pt-5 mb-5">
                 <div className="row-cols-1 row g-3">
             { error && <Message message={error} error/>}
+            <div className="col">
             <div className="card border-0  shadow-sm">
-                <FeaturedMedia id={post.featured_media} classes="img-fluid" />
+                <FeaturedMedia id={post.featured_media} classes="img-fluid bd-placeholder-img card-img-top" />
             <div className="card-body">
            {!post.length &&(
                <>
@@ -46,6 +47,7 @@ const BlogDetail = () => {
                </>
            )}
            
+         </div>
          </div>
          </div>
          </div>

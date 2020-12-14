@@ -37,8 +37,8 @@ const Home = () => {
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               {error && <Message message={error} error />}
               {posts.map((post) => (
-                <div className="col">
-                  <div className="card shadow-sm rounded  mb-3" key={post.id}>
+                <div className="col" key={post.id}>
+                  <div className="card shadow-sm rounded  mb-3">
                     <FeaturedMedia id={post.featured_media} classes="bd-placeholder-img card-img-top" />
                     <div className="card-body">
                       <h4
