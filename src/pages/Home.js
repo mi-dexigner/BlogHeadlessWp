@@ -7,6 +7,7 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import FeaturedMedia from "../components/FeaturedMedia";
 import Footer from "../components/Footer";
+import Heading from "../components/Heading";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
@@ -29,11 +30,18 @@ const Home = () => {
   }, []);
 
   if(!posts) return <Loader/>
-  
+  /* posts?per_page=2
+  posts?order=asc
+  posts?categories=33
+  posts?=search[plugin]
+  posts?filter[orderby]=rand&filter[posts_per_page]=1
+  */
   return (
     <div>
       <Navbar />
       <div className="container pt-5">
+      <Heading title="Editor's Pick This Week" />
+        <hr className="spacer"/>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               {error && <Message message={error} error />}
               {posts.map((post) => (

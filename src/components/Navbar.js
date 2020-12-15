@@ -20,7 +20,7 @@ const Navbar = ({props}) => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
   
                 <form className="d-flex ms-auto d-none d-md-flex">
-  <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+  <input className="form-control me-2" type="search" placeholder="Discover news, articles and more..." aria-label="Discover news, articles and more..." />
   <button className="btn btn-outline-success" type="submit">Search</button>
 </form>
 {/*<SignedInLinks />*/}

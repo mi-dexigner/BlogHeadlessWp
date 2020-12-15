@@ -26,7 +26,6 @@ export default class Login extends Component {
         password: this.state.password,
     };
     this.setState( { loading: true }, () => {
-        //https://api.midexigner.com/wp-json/wp/v2/token?api_key=1A0oBLEWORhu5fn5IayPDwEWO&api_secret=lIWYJFSeQFJI5^Cy8G%23tYv0%23i$yf!%%26C
        Axios.post( 'https://api.midexigner.com/wp-json/jwt-auth/v1/token', loginData ).then( res => {
         if ( undefined === res.data.token ) {
             this.setState( { error: res.data.message, loading: false } );
@@ -56,14 +55,13 @@ export default class Login extends Component {
     }
 
     render() {
-        const { username, password, userNiceName, loggedIn, error, loading }= this.state;
-        const user = ( userNiceName ) ? userNiceName : localStorage.getItem( 'userName' );
+        const { username, password, loggedIn, error, loading }= this.state;
 
         return (
             <>
                  <Navbar/>
-                 {loggedIn || localStorage.getItem( 'token' ) ? (<Redirect to={`/admin/dashboard/${user}`} noThrow />):(
-              <main className="form-signin">
+                 {loggedIn || localStorage.getItem( 'token' ) ? (<Redirect to={`/admin/dashboard/`} noThrow />):(
+              <main className="bg-white rounded m-5  p-5 d-grid gap-2 col-4 mx-auto">
                   { error && <div className="alert alert-danger" dangerouslySetInnerHTML={ this.createMarkup( error ) }/> }
   <form onSubmit={ this.onFormSubmit }>
     <h1 className="h3 mb-3 fw-normal">Please sign in</h1>

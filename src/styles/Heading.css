@@ -1,0 +1,35 @@
+.heading{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    align-items: end;
+    display: flex;
+}
+.heading h2{
+    box-sizing: border-box;
+    margin: 0px auto;
+    min-width: 0px;
+    line-height: 1.33;
+    font-size: 1.5rem;
+    position: relative;
+    display: block;
+    color: #2d3748;
+    font-weight: bold;
+    text-decoration: none;
+    padding-left: 2rem;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.heading h2:before{
+    background-color: #e2e8f0;
+    content: "";
+    border-radius: 9999px;
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    top: 0px;
+    left: 0px;
+}

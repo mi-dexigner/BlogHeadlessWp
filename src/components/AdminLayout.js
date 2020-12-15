@@ -1,20 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Redirect } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import '../styles/AdminLayout.css'
 import Navbar from './Navbar'
+import AppContext from '../context/AppContext'
 
-const AdminLayout = ({children}) => {
-    const loggedIn = localStorage.getItem('loggedIn')
+const AdminLayout = (props) => {
+    const [ store, setStore ] = useContext( AppContext );
     return (
         <>
-        {!loggedIn ? <Redirect to={`/login`} noThrow />:null}
+        {!store.loggedIn ? <Redirect to={`/admin/login`} noThrow />:null}
         <Navbar />
         <div className="container-fluid">
         <div className="row">
             <Sidebar />
             <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-               {children}
+               {props.children}
             </main>
         </div>
         </div>
