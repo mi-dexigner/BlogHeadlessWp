@@ -36,14 +36,14 @@ const Contact = () => {
                    <div className="row">
   <div className="col">
   <div className="form-floating mb-3">
-    <input type="text" className="form-control" placeholder="Name" aria-label="Name" />
-    <label htmlFor="floatingInput">Name</label>
+    <input type="email" className="form-control" placeholder="email@example.com" aria-label="email@example.com" />
+    <label htmlFor="Email">Email</label>
     </div>
   </div>
   <div className="col">
   <div className="form-floating mb-3">
-    <input type="email" className="form-control" placeholder="Email" aria-label="Email" />
-    <label htmlFor="Email">Email</label>
+    <input type="text" className="form-control" placeholder="(xxx) xxx-xxxx" aria-label="(xxx) xxx-xxxx" />
+    <label htmlFor="floatingInput">Phone Number</label>
     </div>
   </div>
 </div>

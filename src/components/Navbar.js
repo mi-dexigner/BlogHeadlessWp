@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import SignedInLinks from './SignedInLinks'
 import SignedOutLinks from './SignedOutLinks'
 import logo from '../logo.png'
+import '../styles/Navbar.css';
 
 const Navbar = ({props}) => {
     const loggedIn = localStorage.getItem('loggedIn');

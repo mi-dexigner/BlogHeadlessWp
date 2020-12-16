@@ -1,0 +1,22 @@
+.navbar-light .navbar-nav .nav-link {
+   
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    color: inherit;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0.25rem;
+    margin: 0;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    color: #718096;
+}

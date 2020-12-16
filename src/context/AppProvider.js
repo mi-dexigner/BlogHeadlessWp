@@ -10,14 +10,14 @@ const AppProvider = (props)=>{
 		sidebarActive: true
     } );
     useEffect( () => {
-        const fetchBusinesses = () => {
 		const token    = localStorage.getItem( 'token' );
 		const userName = localStorage.getItem( 'userName' );
 		const loggedIn = localStorage.getItem( 'loggedIn' );
 
-		setStore({...store, token, userName,loggedIn});
+		return ()=>{
+            setStore({...store, token, userName,loggedIn});
         }
-        fetchBusinesses();
+
 	},[]);
     return (
         <AppContext.Provider  value={ [ store, setStore ] }>

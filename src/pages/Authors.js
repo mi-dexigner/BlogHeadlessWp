@@ -43,16 +43,19 @@ const Authors = () => {
                    <div className="row">
                    {error && <Message message={error} error />}
                    {authors.map((author) => (
+                     <>
+                     {console.log(author.instagram_url)}
                     <AuthorCard 
                     key={author.slug} 
                     avatar_urls={author.avatar_urls[96]}  
                     name={author.full_name.length === 0 ? author.full_name : author.name} slug={author.slug} 
                     position="Creative Designer"
                     description={author.description}
-                    instagram="#"
-                    twitter="#"
+                    instagram={author.instagram_url.length !== 0 ? author.instagram_url :'#' }
+                    twitter={author.twitter_url.length !== 0 ? author.twitter_url :'#' }
                     website={author.url.length === 0 ? author.url :'#' }
                     />
+                    </>
                    ))}
                    </div>
                </div>

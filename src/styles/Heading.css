@@ -4,8 +4,8 @@
     min-width: 0px;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: end;
-    align-items: end;
+    -webkit-box-align: flex-end;
+    align-items: flex-end;
     display: flex;
 }
 .heading h2{
