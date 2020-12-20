@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import { useParams } from 'react-router-dom';
 import axios from '../services/axios'
+import requests from "../services/requests";
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import FeaturedMedia from '../components/FeaturedMedia';
@@ -15,7 +16,7 @@ const BlogDetail = () => {
     useEffect(() => {
         async function fetchData() {
             try {
-            const request = await axios.get(`/posts?slug=${slug}`);
+            const request = await axios.get(`${requests.fetchPosts}?slug=${slug}`);
             setPost(request.data[0]);;
             return request.data;
             }catch (error) {

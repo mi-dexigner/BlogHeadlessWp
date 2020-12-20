@@ -1,20 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import SignedInLinks from './SignedInLinks'
 import SignedOutLinks from './SignedOutLinks'
-import logo from '../logo.png'
 import '../styles/Navbar.css';
+import Logo from './Logo';
 
 const Navbar = ({props}) => {
     const loggedIn = localStorage.getItem('loggedIn');
+
+
     return (
         
           <nav className="sticky-top navbar navbar-expand-lg navbar-light bg-white shadow-sm flex-md-nowrap">
             <div className="container mx-auto flex justify-between">
-                
-                    <Link to="/" className="navbar-brand">
-                        <img src={logo} alt=""/>
-                    </Link>
+                <Logo/>
+                    
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>

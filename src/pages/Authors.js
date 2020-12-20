@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import AuthorCard from '../components/AuthorCard'
 import Loader from '../components/Loader'
 import axios from "../services/axios";
+import requests from "../services/requests";
 import Message from '../components/Message'
 
 const Authors = () => {
@@ -13,7 +14,7 @@ const Authors = () => {
     useEffect(() => {
         async function fetchData() {
           try {
-            const request = await axios.get("/users");
+            const request = await axios.get(requests.fetchUsers);
            setAuthors(request.data);
             //console.log(request.data);
             return request.data;

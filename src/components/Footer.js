@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import footerLogo from '../footerlogo.png'
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-3">
-              <img src={footerLogo} alt="logo"/>
+             <Logo/>
              <p> &copy;{" "} {new Date().getFullYear()}, All Rights Reserved</p>
           </div>
           <div className="col-md-3">

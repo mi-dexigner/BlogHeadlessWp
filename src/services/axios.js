@@ -5,7 +5,7 @@ import axios from 'axios';
 */
 
 const instance = axios.create({
-    baseURL:"https://api.midexigner.com/wp-json/wp/v2"
+    baseURL:"https://api.midexigner.com/wp-json/"
 });
 
 export default instance;

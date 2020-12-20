@@ -1,11 +1,12 @@
 import React,{useState,useEffect} from 'react'
 import axios from "../services/axios";
+import requests from "../services/requests";
 import Loader from "../components/Loader";
 const FeaturedMedia = ({id,classes}) => {
     const [media, setMedia] = useState('')
     useEffect(()=>{
         async function fetchData() {
-            const request = await axios.get(`/media/${id}`);
+            const request = await axios.get(`${requests.fetchMedia}/${id}`);
             setMedia(request.data);
         }
         fetchData();

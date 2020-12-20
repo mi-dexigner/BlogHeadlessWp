@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Moment from "react-moment";
 import Navbar from "../components/Navbar";
 import axios from "../services/axios";
+import requests from "../services/requests";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 import FeaturedMedia from "../components/FeaturedMedia";
@@ -16,8 +17,9 @@ const Home = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const request = await axios.get("/posts");
-        setPosts(request.data);
+        const request = await axios.get(requests.fetchPosts);
+        console.log(request.data);
+       setPosts(request.data);
         return request.data;
       } catch (error) {
         setError(error.response.data.message);
@@ -44,7 +46,7 @@ const Home = () => {
         <hr className="spacer"/>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               {error && <Message message={error} error />}
-              {posts.map((post) => (
+             {posts.map((post) => (
                 <div className="col" key={post.id}>
                   <div className="card shadow-sm rounded  mb-3">
                   {post.featured_media!== 0 ? <FeaturedMedia id={post.featured_media} classes="bd-placeholder-img card-img-top" /> :null }
