@@ -9,6 +9,7 @@ import Message from "../components/Message";
 import FeaturedMedia from "../components/FeaturedMedia";
 import Footer from "../components/Footer";
 import Heading from "../components/Heading";
+import Newsletter from "../components/Newsletter";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
@@ -46,10 +47,10 @@ const Home = () => {
         <hr className="spacer"/>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               {error && <Message message={error} error />}
-             {posts.map((post) => (
+             {posts.slice(0,3).map((post) => (
                 <div className="col" key={post.id}>
                   <div className="card shadow-sm rounded  mb-3">
-                  {post.featured_media!== 0 ? <FeaturedMedia id={post.featured_media} classes="bd-placeholder-img card-img-top" /> :null }
+                  {post.featured_media!== 0 ? <FeaturedMedia id={post.featured_media} classes="height-25 card-img-top" /> :null }
                     <div className="card-body">
                       <h4
                         className="card-title"
@@ -77,6 +78,7 @@ const Home = () => {
               ))}
             
         </div>
+        <Newsletter />
       </div>
       <Footer />
     </div>

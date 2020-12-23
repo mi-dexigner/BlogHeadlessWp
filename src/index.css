@@ -27,3 +27,9 @@ body {
     margin-top: 2rem;
     margin-bottom: 2rem
 }
+
+.height-25{
+  height: 250px;
+  object-fit: cover;
+  object-position: top center;
+}
