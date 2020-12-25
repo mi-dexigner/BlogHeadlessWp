@@ -10,7 +10,7 @@ const Navbar = ({props}) => {
 
     return (
         
-          <nav className="sticky-top navbar navbar-expand-lg navbar-light bg-white shadow-sm flex-md-nowrap">
+          <nav className="sticky-tops navbar navbar-expand-lg navbar-light bg-white shadow-sms py-5 flex-md-nowrap">
             <div className="container mx-auto flex justify-between">
                 <Logo/>
                     

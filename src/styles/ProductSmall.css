@@ -1,0 +1,94 @@
+.product__small .cards{
+    max-width: none;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    padding: 0.5rem
+}
+.product__small .cards .cards__inner{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    background-color: #fff;
+    border-radius: 1rem;
+    transition: transform 250ms ease 0s, box-shadow 250ms ease 0s, color 250ms ease 0s;
+    box-shadow: rgba(1, 1, 1, 0.05) 1px 1px 5px 0px;
+    overflow: hidden;
+    height: 100%;
+    flex-direction: row;
+    border-left-style: solid;
+    border-left-width: 5px;
+    border-left-color: #a3bffa;
+    display: flex;
+    flex-direction: row;
+}
+.product__small .cards .cards__inner:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: rgba(46, 41, 51, 0.08) 0px 2px 4px, rgba(71, 63, 79, 0.16) 0px 5px 10px;
+}
+.product__small .cards .cards__inner .cards__img{
+    box-sizing: border-box;
+    min-width: 0px;
+    flex-basis: 33.3333%;
+    margin: 0rem;
+    border-radius: 0.5rem;
+    min-height: 8.3rem;
+    max-height: none;
+}
+.product__small .cards .cards__inner .cards__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.product__small .cards .cards__inner .cards__content{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex: 1 1 0%;
+    padding: 1rem;
+   
+}
+
+.product__small .cards .cards__inner .cards__content a{
+    box-sizing: border-box;
+    margin: 0px 0px 1rem;
+    min-width: 0px;
+    font-family: Inter, sans-serif;
+    line-height: 1.33;
+    display: block;
+    color:#2d3748;
+    font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+.product__small .cards .cards__inner .cards__content .author_sec .author_inner .post__meta,
+.product__small .cards .cards__inner .cards__content .author_sec .author_inner{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    flex: 1 1 0%;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    color: #a0aec0;
+    display: flex;
+}
+.product__small .cards .cards__inner .cards__content .author_sec .author_inner a{
+    display: inline-block;
+    flex-basis: auto;
+    font-size: 0.75rem;
+    color: #a0aec0;
+    padding-right: 0.5rem;
+}
+.product__small .cards .cards__inner .cards__content .author_sec .author_inner .post__meta{
+    font-size: 0.75rem;
+    color: #a0aec0;
+    line-height: 1.33;
+}

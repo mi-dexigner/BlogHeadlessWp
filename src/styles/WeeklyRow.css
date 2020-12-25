@@ -1,0 +1,152 @@
+.weekly__product .cards__inner{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    height: 100%;
+    flex-direction: row;
+    display: flex;
+    border: 0px solid transparent;
+    background-color: transparent;
+    position: relative;
+    transition: transform 250ms ease 0s, box-shadow 250ms ease 0s, color 250ms ease 0s;
+    margin-right: calc(var(--bs-gutter-x)/ 2);
+    margin-left: calc(var(--bs-gutter-x)/ 2);
+    box-shadow: rgba(1, 1, 1, 0.05) 1px 1px 5px 0px;
+    border-radius: 1rem;
+}
+.weekly__product .cards__inner:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: rgba(46, 41, 51, 0.08) 0px 2px 4px, rgba(71, 63, 79, 0.16) 0px 5px 10px;
+}
+.weekly__product .cards .image_sec{
+    box-sizing: border-box;
+    min-width: 0px;
+    flex-basis: 33.3333%;
+    margin: 0.5rem 0px 0.5rem 0.5rem;
+    height: 100%;
+    flex-basis: 100%;
+    margin: 0px;
+}
+.weekly__product .cards .image_sec a{
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    color: #667eea;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    position: relative;
+    display: block;
+    height: 100%;
+}
+.image_sec a .picture{
+    position: relative;
+    overflow: hidden;
+    min-height: 15rem;
+    max-height: 470px;
+    height: 100%;
+    border-radius: 1rem;
+    width: 100%;
+    padding-bottom: 130.556%;
+}
+.weekly__product .cards .image_sec a picture .card-img{
+   position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+    transition: opacity 500ms ease 0s;
+}
+.weekly__product .cards .card-overlay{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex: 1 1 0%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgb(45, 55, 72) 0%, transparent 100%);
+    position: absolute;
+    z-index: 3;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.weekly__product .cards .card-overlay a{
+    box-sizing: border-box;
+    margin: 0px 0px 1rem;
+    min-width: 0px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.33;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-top: auto;
+}
+
+.weekly__product .cards .card-overlay .author_sec{
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    font-size: 0.875rem;
+    margin: 0;
+}
+.weekly__product .cards .card-overlay .author_sec .author_inner{
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    align-items: center;
+    display: flex;
+    
+}
+
+.author_pic{
+    position: relative;
+    overflow: hidden;
+    border-radius: 9999px;
+    background-color:#e2e8f0;
+    border: 3px solid #e2e8f0;
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    width: 48px;
+    height: 48px;
+    opacity: 0.9;
+    margin-right: 1rem;
+}
+.author__pic_inner{
+    width: 100%;
+    padding-bottom: 100%;
+}
+.author__pic_inner img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+    transition: none 0s ease 0s;
+}
+.author_pic:hover{
+   opacity: 1;
+}

@@ -11,12 +11,12 @@ import PostNew  from './pages/PostNew'
 import User  from './pages/User'
 import FourZeroFour  from './pages/FourZeroFour'
 import Contact from './pages/Contact';
-import AppProvider from './context/AppProvider';
+//import AppProvider from './context/AppProvider';
 const App = () => {
   return (
     <div className="app user-select-none">
       <Router>
-      <AppProvider>
+      {/*<AppProvider>*/}
     <Switch>
       <Route exact path="/" component={Home} />
       <Route path="/post/:slug" component={BlogDetail} />
@@ -30,7 +30,7 @@ const App = () => {
       <Route path="/admin/users/" component={User} />
       <Route component={FourZeroFour} />
     </Switch>
-    </AppProvider>
+    {/*</AppProvider>*/}
   </Router>
     </div>
   )

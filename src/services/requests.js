@@ -1,7 +1,8 @@
 export default {
     fetchFavicon:`/wp/v2/favicon`,
     fetchLogo:`/wp/v2/logo`,
-    fetchPosts:`/wp/v2/posts`,
+    fetchPosts:`/mi/v2/posts`,
+    fetchWeekly:`/mi/v2/weekly-posts`,
     fetchPages:`/wp/v2/pages`,
     fetchMedia:`/wp/v2/media`,
     fetchCategories:`/wp/v2/categories`,

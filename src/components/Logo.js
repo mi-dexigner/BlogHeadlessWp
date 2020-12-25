@@ -10,7 +10,6 @@ const Logo = () => {
           try {
             const request = await axios.get(requests.fetchLogo);
             setLogo(request.data.url)
-            console.log(request.data.url);
             return request.data;
           } catch (error) {
             console.error(error.response.data.message);
