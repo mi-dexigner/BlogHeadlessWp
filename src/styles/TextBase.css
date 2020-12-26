@@ -1,0 +1,15 @@
+.text_base_section h2{
+    box-sizing: border-box;
+    margin: 0px 0px 1rem;
+    min-width: 0px;
+    font-family: Inter, sans-serif;
+    line-height: 1.33;
+    display: block;
+    color: #2d3748;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: clamp(1.875rem,3rem,2.25rem);
+}
+.text_base_section h2 span {
+    color: #718096;
+}

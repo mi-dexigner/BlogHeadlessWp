@@ -36,14 +36,16 @@ const ProductSmall = ({fetchUrl}) => {
    </Link>
   </div>
   <div className="cards__content">
-    <strong className="d-inline-block mb-2 text-success">Design</strong>
+    {console.log(post.category)}
+    {post.category.map((cat)=>(
+    <strong className="category__name">
+      <Link to={`category/${cat.category_nicename}`}>{cat.cat_name}</Link></strong>
+    ))}
    <Link to={`post/${post.slug}`}>{post.title}</Link>
    <div className="author_sec">
     <div className="author_inner">
     <Link to={`author/${post.author.slug}`}>{post.author.name} </Link>
-            <div className="post__meta">
-                {post.date}
-            </div>
+            <div className="post__meta">{post.date}</div>
         </div>
 </div>
   </div>

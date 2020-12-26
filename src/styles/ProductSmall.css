@@ -92,3 +92,25 @@
     color: #a0aec0;
     line-height: 1.33;
 }
+.product__small .cards .cards__inner .cards__content .category__name{
+    box-sizing: border-box;
+    margin: 0px 0px 1rem;
+    min-width: 0px;
+    display: inline-block;
+} 
+.product__small .cards .cards__inner .cards__content .category__name a{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    display: inline-block;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    vertical-align: middle;
+    padding: 0.25rem 1rem;
+    transition: all 250ms ease 0s;
+    background-color: rgb(198, 246, 213);
+    color: rgba(0, 0, 0, 0.4);
+}

@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Newsletter from "../components/Newsletter";
 import WeeklyRow from "../components/WeeklyRow";
 import ProductSmall from "../components/ProductSmall";
+import TextBase from "../components/TextBase";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Navbar />
         <WeeklyRow title="Editor's Pick This Week" fetchUrl={requests.fetchWeekly}/>
         <ProductSmall  fetchUrl={`${requests.fetchPosts}/?limit=6`} />
+        <TextBase />
         <Newsletter />
       <Footer />
     </div>
